@@ -7,8 +7,10 @@ const app = express();
 
 app.use(express.json());
 
-app.listen(process.env.PORT || 2701, ()=>{
-  console.log('Now listening to requests!');
+const port = process.env.PORT || 2701;
+
+app.listen(port, ()=>{
+  console.log(`Now listening to requests! on port ${port}`);
 });
 
 app.use("/achille/api", route);

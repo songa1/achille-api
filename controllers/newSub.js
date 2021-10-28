@@ -1,4 +1,5 @@
 const Subscriber = require("../models/models");
+const mongoose = require('mongoose');
 
 const newSubscriber = async(req, res)=> {
     const sub = await new Subscriber({
