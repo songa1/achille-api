@@ -5,7 +5,7 @@ const newUser = async()=> {
   
     try {
       await user.save();
-      response.status(200).send(user);
+      response.status(200).send("You have subscribed successfully!");
       console.log(user)
     } catch (error) {
       response.status(500).send(error.message);

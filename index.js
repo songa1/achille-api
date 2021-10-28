@@ -12,5 +12,8 @@ app.listen(process.env.PORT || 2701, ()=>{
 });
 
 app.use("/achille/api", route);
+app.get("/", (req, res)=> {
+  res.send("App running!");
+})
 
 module.exports = app;
