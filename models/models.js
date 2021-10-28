@@ -9,8 +9,11 @@ const UserSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  createdAt: { 
+    type: Date 
+  },
 });
 
-const User = mongoose.model("User", UserSchema);
+const Subscriber = mongoose.model("subscriber", UserSchema);
 
-module.exports = User;
+module.exports = Subscriber;
