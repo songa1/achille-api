@@ -11,7 +11,7 @@ const newSubscriber = async(req, res)=> {
 
     sub.save()
     .then(async(subscribe)=> {
-      res.send(`Subscribed successfully ${subscribe}`);
+      res.status(201).send(subscribe);
       console.log(subscribe)
     })
     .catch(err=>{
